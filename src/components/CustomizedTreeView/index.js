@@ -95,12 +95,12 @@ export default function CustomizedTreeView() {
                         <StyledTreeItem nodeId="user-1-1-1" label="Home" >
                             <StyledTreeItem nodeId="user-1-1-1-1" label="Banner" >
                                 <StyledTreeItem nodeId="user-1-1-1-1-1" label="list" ></StyledTreeItem>
-                                <StyledTreeItem nodeId="user-1-1-1-1-2" label="shotcut" ></StyledTreeItem>
                             </StyledTreeItem>
+                            <StyledTreeItem nodeId="user-1-1-1-1-2" label="Shotcut" ></StyledTreeItem>
                         </StyledTreeItem>
                     </StyledTreeItem>
                 </StyledTreeItem>
-                <StyledTreeItem nodeId="user-/" label="ครู" >
+                <StyledTreeItem nodeId="user-2" label="ครู" >
                     <StyledTreeItem nodeId="user-1" label="หน้า" ></StyledTreeItem>
                 </StyledTreeItem>
             </StyledTreeItem>
