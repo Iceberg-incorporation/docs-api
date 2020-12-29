@@ -1,20 +1,22 @@
-export const routes = [
-    {
-      path: "/",
-      exact: true,
-      sidebar: () => <div>home!</div>,
-      main: () => <h2>Home</h2>
-    },
-    {
-      path: "/bubblegum",
-      sidebar: () => <div>bubblegum!</div>,
-      main: () => <h2>Bubblegum</h2>
-    },
-    {
-      path: "/shoelaces",
-      sidebar: () => <div>shoelaces!</div>,
-      main: () => <h2>Shoelaces</h2>
-    }
-  ];
+import { ApiBannerListAllView } from '@doc-api/views'
 
-  export default routes
+export const routes = [
+  {
+    path: "/",
+    exact: true,
+    sidebar: () => <div>home!</div>,
+    main: () => <h2>Home</h2>
+  },
+  {
+    path: "/user/student/home/banner/list",
+    sidebar: () => <div>banner</div>,
+    main: () => <ApiBannerListAllView></ApiBannerListAllView>
+  },
+  {
+    path: "/shoelaces",
+    sidebar: () => <div>shoelaces!</div>,
+    main: () => <h2>Shoelaces</h2>
+  }
+];
+
+export default routes

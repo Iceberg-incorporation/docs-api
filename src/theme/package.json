@@ -1,0 +1,5 @@
+{
+    "name":"@doc-api/theme",
+    "main": "index.js",
+    "version": "1.0.0"
+}

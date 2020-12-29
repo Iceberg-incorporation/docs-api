@@ -6,6 +6,7 @@ import TreeView from '@material-ui/lab/TreeView';
 import TreeItem from '@material-ui/lab/TreeItem';
 import Collapse from '@material-ui/core/Collapse';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
+import { useHistory } from 'react-router-dom';
 
 function MinusSquare(props) {
     return (
@@ -77,7 +78,7 @@ const useStyles = makeStyles({
 
 export default function CustomizedTreeView() {
     const classes = useStyles();
-
+const history = useHistory()
     return (
         <TreeView
             className={classes.root}
@@ -94,7 +95,9 @@ export default function CustomizedTreeView() {
                     <StyledTreeItem nodeId="user-1-1" label="หน้า" >
                         <StyledTreeItem nodeId="user-1-1-1" label="Home" >
                             <StyledTreeItem nodeId="user-1-1-1-1" label="Banner" >
-                                <StyledTreeItem nodeId="user-1-1-1-1-1" label="list" ></StyledTreeItem>
+                                <StyledTreeItem nodeId="user-1-1-1-1-1" label="list" onClick={() => {
+                                    history.push('/user/student/home/banner/list')
+                                }} ></StyledTreeItem>
                             </StyledTreeItem>
                             <StyledTreeItem nodeId="user-1-1-1-1-2" label="Shotcut" ></StyledTreeItem>
                         </StyledTreeItem>
