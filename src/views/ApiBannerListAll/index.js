@@ -2,6 +2,7 @@ import { PaperApi } from '@doc-api/components';
 import React from 'react';
 
 export default function ApiBannerListAllView(props) {
+    const [pathUrl] = React.useState(["blackboardapp.co","user","student","page","home","banner","list"])
     const [header] = React.useState({
         title: "Banner: list all",
         detail: "Returns รายการ Banner ที่ตรงกับพารามิเตอร์คำขอ API"
@@ -100,6 +101,6 @@ export default function ApiBannerListAllView(props) {
     });
 
     return (
-        <PaperApi header={header} common={common} request={request} response={response} errors={errors}></PaperApi>
+        <PaperApi header={header} common={common} request={request} response={response} errors={errors} path={pathUrl}></PaperApi>
     )
 }
