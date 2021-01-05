@@ -115,9 +115,14 @@ export default function CustomizedTreeView() {
                                         history.push('/user/student/home/category/list')
                                     }} ></StyledTreeItem>
                                 </StyledTreeItem>
-                                <StyledTreeItem nodeId="user-1-1-1-1-4" label="RandomLesson">
-                                    <StyledTreeItem nodeId="user-1-1-1-1-4-1" label="list" onClick={() => {
+                                <StyledTreeItem nodeId="user-1-1-1-1-5" label="RandomLesson">
+                                    <StyledTreeItem nodeId="user-1-1-1-1-5-1" label="list" onClick={() => {
                                         history.push('/user/student/home/random-lesson/list')
+                                    }} ></StyledTreeItem>
+                                </StyledTreeItem>
+                                <StyledTreeItem nodeId="user-1-1-1-1-6" label="LessonByCategory">
+                                    <StyledTreeItem nodeId="user-1-1-1-1-6-1" label="list" onClick={() => {
+                                        history.push('/user/student/home/lesson-by-category/list')
                                     }} ></StyledTreeItem>
                                 </StyledTreeItem>
                             </StyledTreeItem>

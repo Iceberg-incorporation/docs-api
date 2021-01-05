@@ -14,11 +14,14 @@ const useStyles = makeStyles((theme) => ({
         zIndex: theme.zIndex.drawer + 1,
     },
     drawer: {
-        width: drawerWidth,
+        minWidth: drawerWidth,
+        maxWidth: drawerWidth + 60,
         flexShrink: 0,
     },
     drawerPaper: {
-        width: drawerWidth,
+        minWidth: drawerWidth,
+        maxWidth: drawerWidth + 60,
+        padding: 10
     },
     drawerContainer: {
         overflow: 'auto',
