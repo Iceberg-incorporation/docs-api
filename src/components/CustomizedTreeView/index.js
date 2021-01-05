@@ -93,38 +93,43 @@ export default function CustomizedTreeView() {
                 <StyledTreeItem nodeId="admin" label="Admin"></StyledTreeItem>
                 <StyledTreeItem nodeId="user" label="User">
                     <StyledTreeItem nodeId="user-1" label="นักเรียน" >
-                        <StyledTreeItem nodeId="user-1-1" label="หน้า" >
-                            <StyledTreeItem nodeId="user-1-1-1" label="Home" >
-                                <StyledTreeItem nodeId="user-1-1-1-1" label="Banner" >
-                                    <StyledTreeItem nodeId="user-1-1-1-1-1" label="list" onClick={() => {
-                                        history.push('/user/student/home/banner/list')
-                                    }} ></StyledTreeItem>
-                                </StyledTreeItem>
-                                <StyledTreeItem nodeId="user-1-1-1-1-2" label="Shotcut">
-                                    <StyledTreeItem nodeId="user-1-1-1-1-2-1" label="list" onClick={() => {
-                                        history.push('/user/student/home/shortcut/list')
-                                    }} ></StyledTreeItem>
-                                </StyledTreeItem>
-                                <StyledTreeItem nodeId="user-1-1-1-1-3" label="VideoFree">
-                                    <StyledTreeItem nodeId="user-1-1-1-1-3-1" label="list" onClick={() => {
-                                        history.push('/user/student/home/video-free/list')
-                                    }} ></StyledTreeItem>
-                                </StyledTreeItem>
-                                <StyledTreeItem nodeId="user-1-1-1-1-4" label="Category">
-                                    <StyledTreeItem nodeId="user-1-1-1-1-4-1" label="list" onClick={() => {
-                                        history.push('/user/student/home/category/list')
-                                    }} ></StyledTreeItem>
-                                </StyledTreeItem>
-                                <StyledTreeItem nodeId="user-1-1-1-1-5" label="RandomLesson">
-                                    <StyledTreeItem nodeId="user-1-1-1-1-5-1" label="list" onClick={() => {
-                                        history.push('/user/student/home/random-lesson/list')
-                                    }} ></StyledTreeItem>
-                                </StyledTreeItem>
-                                <StyledTreeItem nodeId="user-1-1-1-1-6" label="LessonByCategory">
-                                    <StyledTreeItem nodeId="user-1-1-1-1-6-1" label="list" onClick={() => {
-                                        history.push('/user/student/home/lesson-by-category/list')
-                                    }} ></StyledTreeItem>
-                                </StyledTreeItem>
+                        <StyledTreeItem nodeId="user-1-1" label="Home" >
+                            <StyledTreeItem nodeId="user-1-1-1" label="Banner" >
+                                <StyledTreeItem nodeId="user-1-1-1-1" label="list" onClick={() => {
+                                    history.push('/user/student/home/banner/list')
+                                }} ></StyledTreeItem>
+                            </StyledTreeItem>
+                            <StyledTreeItem nodeId="user-1-1-1-2" label="Shotcut">
+                                <StyledTreeItem nodeId="user-1-1-1-2-1" label="list" onClick={() => {
+                                    history.push('/user/student/home/shortcut/list')
+                                }} ></StyledTreeItem>
+                            </StyledTreeItem>
+                            <StyledTreeItem nodeId="user-1-1-1-3" label="VideoFree">
+                                <StyledTreeItem nodeId="user-1-1-1-3-1" label="list" onClick={() => {
+                                    history.push('/user/student/home/video-free/list')
+                                }} ></StyledTreeItem>
+                            </StyledTreeItem>
+                            <StyledTreeItem nodeId="user-1-1-1-4" label="Category">
+                                <StyledTreeItem nodeId="user-1-1-1-4-1" label="list" onClick={() => {
+                                    history.push('/user/student/home/category/list')
+                                }} ></StyledTreeItem>
+                            </StyledTreeItem>
+                            <StyledTreeItem nodeId="user-1-1-1-5" label="RandomLesson">
+                                <StyledTreeItem nodeId="user-1-1-1-5-1" label="list" onClick={() => {
+                                    history.push('/user/student/home/random-lesson/list')
+                                }} ></StyledTreeItem>
+                            </StyledTreeItem>
+                            <StyledTreeItem nodeId="user-1-1-1-6" label="LessonByCategory">
+                                <StyledTreeItem nodeId="user-1-1-1-6-1" label="list" onClick={() => {
+                                    history.push('/user/student/home/lesson-by-category/list')
+                                }} ></StyledTreeItem>
+                            </StyledTreeItem>
+                        </StyledTreeItem>
+                        <StyledTreeItem nodeId="user-1-2" label="Lesson" >
+                            <StyledTreeItem nodeId="user-1-2-1" label="Comment" >
+                                <StyledTreeItem nodeId="user-1-1-1-1" label="create" onClick={() => {
+                                    history.push('/user/student/lesson/comment/create')
+                                }} ></StyledTreeItem>
                             </StyledTreeItem>
                         </StyledTreeItem>
                     </StyledTreeItem>
