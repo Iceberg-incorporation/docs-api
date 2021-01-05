@@ -211,7 +211,31 @@ export default function PaperApi(props) {
                             <Typography component="div" className={classes.devsiteRequestProperties}>
                                 <Typography variant="h5">{props.response.list.properties.title}</Typography>
                                 <Typography variant="body1">{props.response.list.properties.detail}</Typography>
-                                {props.response.list.properties.table === null ? (<React.Fragment></React.Fragment>) : (<React.Fragment>Table Show</React.Fragment>)}
+                                {props.response.list.properties.table === null ? (<React.Fragment></React.Fragment>) : (<React.Fragment>
+                                    <TableContainer component="div">
+                                        <Table aria-label="properties table">
+                                            <TableHead>
+                                                <TableRow>
+                                                    <TableCell align="left"><Typography variant="h6">{props.response.list.properties.table.title}</Typography></TableCell>
+                                                    <TableCell align="left"></TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <StyledTableCell align="left" >{props.response.list.properties.table.header[0]}</StyledTableCell>
+                                                    <StyledTableCell align="left" >{props.response.list.properties.table.header[1]}</StyledTableCell>
+                                                </TableRow>
+                                            </TableHead>
+                                            <TableBody>
+                                                {props.response.list.properties.table.data.map((_data, key) => (
+                                                    <StyledTableRow key={key}>
+                                                        <StyledTableCell>{_data.key}</StyledTableCell>
+                                                        <StyledTableCell>{_data.description}</StyledTableCell>
+                                                    </StyledTableRow>
+                                                ))}
+
+                                            </TableBody>
+                                        </Table>
+                                    </TableContainer>
+                                </React.Fragment>)}
                             </Typography>
                         </Typography>
 

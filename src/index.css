@@ -1,13 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "PrintAble4U";
+  src: url(./assets/fonts/PrintAble4U/PrintAble4U_Regular_ver_1.00.otf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* @font-face {
+  font-family: "PrintAble4U";
+  src: url(./assets/fonts/PrintAble4U/PrintAble4U_Italic_ver_1.00.otf);
+  font-weight: bold;
+} */
+
+body,div,h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-family: "PrintAble4U";
 }
+

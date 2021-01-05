@@ -9,7 +9,7 @@ export default function ApiBannerListAllView(props) {
     });
     const [common] = React.useState({
         title: "Common use cases",
-        detail: ""
+        detail: "รออัพเดต"
     });
     const [request] = React.useState({
         title: "Request",
@@ -24,18 +24,8 @@ export default function ApiBannerListAllView(props) {
             },
             headers: {
                 title: "Headers",
-                detail: "",
-                table: {
-                    title: "Headers",
-                    header: ["Key", "Description"],
-                    data: [{
-                        key: "authorization",
-                        description: ""
-                    }, {
-                        key: "app-name",
-                        description: ""
-                    }]
-                }
+                detail: "ไม่มี",
+                table: null
             },
             parameters: {
                 title: "Parameters",
@@ -44,7 +34,7 @@ export default function ApiBannerListAllView(props) {
             },
             requestBody: {
                 title: "Request body",
-                detail: "",
+                detail: "ไม่มี",
                 table: null
             }
         }
@@ -80,8 +70,11 @@ export default function ApiBannerListAllView(props) {
                     title: "Properties",
                     header: ["Key", "Description"],
                     data: [{
-                        "id": "",
-                        "url": ""
+                        key: "id",
+                        description: "number"
+                    }, {
+                        key: "url",
+                        description: "string"
                     }]
                 }
             }
@@ -100,6 +93,7 @@ export default function ApiBannerListAllView(props) {
         }
     });
 
+    
     return (
         <PaperApi header={header} common={common} request={request} response={response} errors={errors} path={pathUrl}></PaperApi>
     )
