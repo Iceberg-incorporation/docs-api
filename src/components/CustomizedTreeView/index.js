@@ -110,6 +110,16 @@ export default function CustomizedTreeView() {
                                         history.push('/user/student/home/video-free/list')
                                     }} ></StyledTreeItem>
                                 </StyledTreeItem>
+                                <StyledTreeItem nodeId="user-1-1-1-1-4" label="Category">
+                                    <StyledTreeItem nodeId="user-1-1-1-1-4-1" label="list" onClick={() => {
+                                        history.push('/user/student/home/category/list')
+                                    }} ></StyledTreeItem>
+                                </StyledTreeItem>
+                                <StyledTreeItem nodeId="user-1-1-1-1-4" label="RandomLesson">
+                                    <StyledTreeItem nodeId="user-1-1-1-1-4-1" label="list" onClick={() => {
+                                        history.push('/user/student/home/random-lesson/list')
+                                    }} ></StyledTreeItem>
+                                </StyledTreeItem>
                             </StyledTreeItem>
                         </StyledTreeItem>
                     </StyledTreeItem>

@@ -186,7 +186,7 @@ export default function PaperApi(props) {
                                                 {props.request.list.headers.table.data.map((_data, key) => (
                                                     <StyledTableRow key={key}>
                                                         <StyledTableCell>{_data.key}</StyledTableCell>
-                                                        <StyledTableCell>{_data.description}</StyledTableCell>
+                                                        <StyledTableCell className={classes.textDetail}>{_data.description}</StyledTableCell>
                                                     </StyledTableRow>
                                                 ))}
 
@@ -198,7 +198,31 @@ export default function PaperApi(props) {
                             <Typography component="div" className={classes.devsiteRequestParameters}>
                                 <Typography variant="h5">{props.request.list.parameters.title}</Typography>
                                 <Typography variant="body1" className={classes.textDetail}>{props.request.list.parameters.detail}</Typography>
-                                {props.request.list.parameters.table === null ? (<React.Fragment></React.Fragment>) : (<React.Fragment>Table Show</React.Fragment>)}
+                                {props.request.list.parameters.table === null ? (<React.Fragment></React.Fragment>) : (<React.Fragment>
+                                    <TableContainer component="div">
+                                        <Table aria-label="headers table">
+                                            <TableHead>
+                                                <TableRow>
+                                                    <TableCell align="left"><Typography variant="h6">{props.request.list.parameters.table.title}</Typography></TableCell>
+                                                    <TableCell align="left"></TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <StyledTableCell align="left" >{props.request.list.parameters.table.header[0]}</StyledTableCell>
+                                                    <StyledTableCell align="left" >{props.request.list.parameters.table.header[1]}</StyledTableCell>
+                                                </TableRow>
+                                            </TableHead>
+                                            <TableBody>
+                                                {props.request.list.parameters.table.data.map((_data, key) => (
+                                                    <StyledTableRow key={key}>
+                                                        <StyledTableCell>{_data.key}</StyledTableCell>
+                                                        <StyledTableCell className={classes.textDetail}>{_data.description}</StyledTableCell>
+                                                    </StyledTableRow>
+                                                ))}
+
+                                            </TableBody>
+                                        </Table>
+                                    </TableContainer>
+                                </React.Fragment>)}
                             </Typography>
                             <Typography component="div" className={classes.devsiteRequestBody}>
                                 <Typography variant="h5">{props.request.list.requestBody.title}</Typography>
@@ -231,7 +255,7 @@ export default function PaperApi(props) {
                                                 {props.response.list.properties.table.data.map((_data, key) => (
                                                     <StyledTableRow key={key}>
                                                         <StyledTableCell>{_data.key}</StyledTableCell>
-                                                        <StyledTableCell>{_data.description}</StyledTableCell>
+                                                        <StyledTableCell className={classes.textDetail}>{_data.description}</StyledTableCell>
                                                     </StyledTableRow>
                                                 ))}
 

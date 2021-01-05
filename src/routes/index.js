@@ -1,4 +1,4 @@
-import { ApiBannerListAllView, ApiShortcutListAllView, ApiFreeVideoListView } from '@doc-api/views'
+import { ApiBannerListAllView, ApiShortcutListAllView, ApiFreeVideoListView, ApiCategoryListAllView,ApiLessonRandomListView } from '@doc-api/views'
 
 export const routes = [
   {
@@ -14,13 +14,23 @@ export const routes = [
   },
   {
     path: "/user/student/home/shortcut/list",
-    sidebar: () => <div>banner</div>,
+    sidebar: () => <div>shortcut</div>,
     main: () => <ApiShortcutListAllView></ApiShortcutListAllView>
   },
   {
     path: "/user/student/home/video-free/list",
-    sidebar: () => <div>banner</div>,
+    sidebar: () => <div>video-free</div>,
     main: () => <ApiFreeVideoListView></ApiFreeVideoListView>
+  },
+  {
+    path: "/user/student/home/category/list",
+    sidebar: () => <div>category</div>,
+    main: () => <ApiCategoryListAllView></ApiCategoryListAllView>
+  },
+  {
+    path: "/user/student/home/random-lesson/list",
+    sidebar: () => <div>random-lesson</div>,
+    main: () => <ApiLessonRandomListView></ApiLessonRandomListView>
   },
   {
     path: "/shoelaces",

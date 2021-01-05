@@ -2,11 +2,11 @@ import { PaperApi } from '@doc-api/components';
 import React from 'react';
 import json_code from './mock.json';
 
-export default function ApiFreeVideoListView(props) {
-    const [pathUrl] = React.useState(["blackboardapp.co", "user", "student", "page", "home", "video_free", "list"])
+export default function ApiCategoryListAllView(props) {
+    const [pathUrl] = React.useState(["blackboardapp.co", "user", "student", "page", "home", "category", "list"])
     const [header] = React.useState({
-        title: "VideoFree: list",
-        detail: "Returns รายการ VideoFree ที่ตรงกับพารามิเตอร์คำขอ API"
+        title: "Category: list all",
+        detail: "Returns รายการ Category ที่ตรงกับพารามิเตอร์คำขอ API"
     });
     const [common] = React.useState({
         title: "Common use cases",
@@ -17,10 +17,10 @@ export default function ApiFreeVideoListView(props) {
         list: {
             HTTPrequest: {
                 title: "HTTP request",
-                detail: `GET https://api.blackboardapp.co/api/v1/home/free/video/all`,
+                detail: `GET https://api.blackboardapp.co/api/v3/home/category/all`,
                 option: {
                     method: 'GET',
-                    path: `https://api.blackboardapp.co/api/v1/home/free/video/all`
+                    path: `https://api.blackboardapp.co/api/v3/home/category/all`
                 }
             },
             headers: {
@@ -73,13 +73,13 @@ export default function ApiFreeVideoListView(props) {
                         key: "id",
                         description: "number"
                     }, {
-                        key: "name",
+                        key: "title",
                         description: "string"
                     }, {
-                        key: "image",
+                        key: "icon",
                         description: "string"
                     }, {
-                        key: "url",
+                        key: "cover",
                         description: "string"
                     }]
                 }

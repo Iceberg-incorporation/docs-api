@@ -42,7 +42,11 @@ export default function ApiShortcutListAllView(props) {
     });
     const [response] = React.useState({
         title: "Response",
-        detail: "",
+        detail:  `
+        จัดรูปแบบ code
+        On Windows Shift + Alt + F.
+        On Mac Shift + Option + F.
+        On Linux Ctrl + Shift + I.`,
         code: `${JSON.stringify(json_code)}`,
         list: {
             properties: {
