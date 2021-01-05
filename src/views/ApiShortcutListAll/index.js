@@ -16,10 +16,10 @@ export default function ApiShortcutListAllView(props) {
         list: {
             HTTPrequest: {
                 title: "HTTP request",
-                detail: `GET /api/v1/home/shortcut/all`,
+                detail: `GET https://api.blackboardapp.co/api/v1/home/shortcut/all`,
                 option: {
                     method: 'GET',
-                    path: `/api/v1/home/shortcut/all`
+                    path: `https://api.blackboardapp.co/api/v1/home/shortcut/all`
                 }
             },
             headers: {

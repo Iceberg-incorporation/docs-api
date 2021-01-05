@@ -16,10 +16,10 @@ export default function ApiBannerListAllView(props) {
         list: {
             HTTPrequest: {
                 title: "HTTP request",
-                detail: `GET /api/v1/home/banner/all`,
+                detail: `GET https://api.blackboardapp.co/api/v1/home/banner/all`,
                 option: {
                     method: 'GET',
-                    path: `/api/v1/home/banner/all`
+                    path: `https://api.blackboardapp.co/api/v1/home/banner/all`
                 }
             },
             headers: {

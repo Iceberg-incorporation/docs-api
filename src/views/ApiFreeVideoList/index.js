@@ -2,10 +2,10 @@ import { PaperApi } from '@doc-api/components';
 import React from 'react';
 
 export default function ApiFreeVideoListView(props) {
-    const [pathUrl] = React.useState(["blackboardapp.co", "user", "student", "page", "home", "shortcut", "list"])
+    const [pathUrl] = React.useState(["blackboardapp.co", "user", "student", "page", "home", "video_free", "list"])
     const [header] = React.useState({
-        title: "Shortcut: list all",
-        detail: "Returns รายการ Shortcut ที่ตรงกับพารามิเตอร์คำขอ API"
+        title: "VideoFree: list",
+        detail: "Returns รายการ VideoFree ที่ตรงกับพารามิเตอร์คำขอ API"
     });
     const [common] = React.useState({
         title: "Common use cases",
@@ -16,16 +16,32 @@ export default function ApiFreeVideoListView(props) {
         list: {
             HTTPrequest: {
                 title: "HTTP request",
-                detail: `GET /api/v1/home/shortcut/all`,
+                detail: `GET https://api.blackboardapp.co/api/v1/home/free/video/all`,
                 option: {
                     method: 'GET',
-                    path: `/api/v1/home/shortcut/all`
+                    path: `https://api.blackboardapp.co/api/v1/home/free/video/all`
                 }
             },
             headers: {
                 title: "Headers",
-                detail: "ไม่มี",
-                table: null
+                detail: "",
+                table: {
+                    title: "Headers",
+                    header: ["Key", "Description"],
+                    data: [{
+                        key: "id",
+                        description: "number"
+                    }, {
+                        key: "name",
+                        description: "string"
+                    }, {
+                        key: "image",
+                        description: "string"
+                    }, {
+                        key: "url",
+                        description: "string"
+                    }]
+                }
             },
             parameters: {
                 title: "Parameters",
