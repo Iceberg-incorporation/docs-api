@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7ad81fc8.chunk.css",
+    "main.js": "/static/js/main.bb129a88.chunk.js",
+    "main.js.map": "/static/js/main.bb129a88.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.203a4240.js",
+    "runtime-main.js.map": "/static/js/runtime-main.203a4240.js.map",
+    "static/js/2.63a6270d.chunk.js": "/static/js/2.63a6270d.chunk.js",
+    "static/js/2.63a6270d.chunk.js.map": "/static/js/2.63a6270d.chunk.js.map",
+    "static/js/3.08450073.chunk.js": "/static/js/3.08450073.chunk.js",
+    "static/js/3.08450073.chunk.js.map": "/static/js/3.08450073.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.7ad81fc8.chunk.css.map": "/static/css/main.7ad81fc8.chunk.css.map",
+    "static/js/2.63a6270d.chunk.js.LICENSE.txt": "/static/js/2.63a6270d.chunk.js.LICENSE.txt",
+    "static/media/PrintAble4U_Bold_Italic_ver_1.00.e5ae9008.otf": "/static/media/PrintAble4U_Bold_Italic_ver_1.00.e5ae9008.otf",
+    "static/media/PrintAble4U_Bold_ver_1.00.5d441a0f.otf": "/static/media/PrintAble4U_Bold_ver_1.00.5d441a0f.otf",
+    "static/media/PrintAble4U_Italic_ver_1.00.a1201010.otf": "/static/media/PrintAble4U_Italic_ver_1.00.a1201010.otf",
+    "static/media/index.css": "/static/media/PrintAble4U_Regular_ver_1.00.60062dd0.otf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.203a4240.js",
+    "static/js/2.63a6270d.chunk.js",
+    "static/css/main.7ad81fc8.chunk.css",
+    "static/js/main.bb129a88.chunk.js"
+  ]
+}
