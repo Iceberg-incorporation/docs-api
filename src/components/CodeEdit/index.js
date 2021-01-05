@@ -85,6 +85,8 @@ function CodeEdit(props) {
                     // fontSize: 18,
                     // cursorStyle: "block",
                     // wordWrap: "on",
+                    // formatOnPaste: true,
+                    // formatOnType: true,
                 }}
                 height={props.height}
                 value={value}

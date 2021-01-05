@@ -1,4 +1,4 @@
-import { ApiBannerListAllView,ApiShortcutListAllView } from '@doc-api/views'
+import { ApiBannerListAllView, ApiShortcutListAllView, ApiFreeVideoListView } from '@doc-api/views'
 
 export const routes = [
   {
@@ -16,6 +16,11 @@ export const routes = [
     path: "/user/student/home/shortcut/list",
     sidebar: () => <div>banner</div>,
     main: () => <ApiShortcutListAllView></ApiShortcutListAllView>
+  },
+  {
+    path: "/user/student/home/video-free/list",
+    sidebar: () => <div>banner</div>,
+    main: () => <ApiFreeVideoListView></ApiFreeVideoListView>
   },
   {
     path: "/shoelaces",

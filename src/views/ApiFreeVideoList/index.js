@@ -1,5 +1,6 @@
 import { PaperApi } from '@doc-api/components';
 import React from 'react';
+import json_code from './mock.json';
 
 export default function ApiFreeVideoListView(props) {
     const [pathUrl] = React.useState(["blackboardapp.co", "user", "student", "page", "home", "video_free", "list"])
@@ -28,19 +29,17 @@ export default function ApiFreeVideoListView(props) {
                 table: {
                     title: "Headers",
                     header: ["Key", "Description"],
-                    data: [{
-                        key: "id",
-                        description: "number"
-                    }, {
-                        key: "name",
-                        description: "string"
-                    }, {
-                        key: "image",
-                        description: "string"
-                    }, {
-                        key: "url",
-                        description: "string"
-                    }]
+                    data: [
+                        {
+                            key: "app-name",
+                            description: "blackboard-th"
+                        }, {
+                            key: "Content-Type",
+                            description: "application/json"
+                        }, {
+                            key: "platform",
+                            description: "website"
+                        }]
                 }
             },
             parameters: {
@@ -58,62 +57,7 @@ export default function ApiFreeVideoListView(props) {
     const [response] = React.useState({
         title: "Response",
         detail: "",
-        code: `
-        {
-            "success": true,
-            "statusCode": 200,
-            "message": "เรียกข้อมูลสำเร็จ",
-            "data":  [
-                {
-                  "id": 1,
-                  "name": "สถาบัน",
-                  "image": "https://lh3.googleusercontent.com/4fVKydfrUvWKaZzcUU8rT0k1dwfhggNbw8Hu970or2wrQ8EcdMUjRwpO629EnlUbjZW1YyjK162saz-cEC71JAw0L5dVBqtpRbAPoI5KZ7qOpku4_-wPV_RSN_YbLlglGaVkJfbO=s150-p-k",
-                  "url": "https://ndevs-blackboard-test.herokuapp.com/webview-institute"
-                },
-                {
-                  "id": 2,
-                  "name": "คอร์สเรียน",
-                  "image": "https://lh3.googleusercontent.com/9upw1eAYHcyeEivM1TaDK6TWLn7cwoNiaLWI4m56x3sxJ6DE0dXkSp9xFgghRKIFU61KzIbcLgf5bezVSEPvgEhNbERYywnlPAOifwEBt1VcyZOLjPjxhhqoyXyzet47ijBQZkjL=s150-p-k",
-                  "url": "https://ndevs-blackboard-test.herokuapp.com/webview-course"
-                },
-                {
-                  "id": 3,
-                  "name": "วิชาชีพ",
-                  "image": "https://lh3.googleusercontent.com/nH78oV545NQGhGUv_wgqK_5EZhcNLWzPKAvQNKbCc4rNVBqsIFvBMB05jZLQijhqdBGdORotu02-rfP-ZT7xI5tXZXLYZ8KO5Ca0rY1lUaag3vffR2D5NC4bTpD0DxnXf8okYPxv=s150-p-k",
-                  "url": "https://ndevs-blackboard-test.herokuapp.com/webview-profession"
-                },
-                {
-                  "id": 4,
-                  "name": "ครูฟรีแลนด์",
-                  "image": "https://lh3.googleusercontent.com/iWMxXKBrUbjP8cofKr_tpY0VA203k2XWZCIjcW-MX-5rtdzZAtbegexiaQnrC2hKOWgmYqcLBZ_Wp-4BEsRSGPOQo-4elb2Y_fGSQDx6CseKDDXf58Pq6A6F1WrIREf4hWfbWM8h=s150-p-k",
-                  "url": "https://ndevs-blackboard-test.herokuapp.com/webview-freelance_teacher"
-                },
-                {
-                  "id": 5,
-                  "name": "คอร์สเรียนของฉัน",
-                  "image": "https://lh3.googleusercontent.com/qf9KtvSfI4RgNp8SM-GKI8aDVT9vXHHghtaP-gkV7IRW12hb1LGsMBTRPqTnIe6kpjUectACOWEnvB7zJwUXWhJG2H5SqIygDeE1s9l0LTTXN2w-heJByotdcb8iJOO6UW4ysCey=s150-p-k",
-                  "url": "https://ndevs-blackboard-test.herokuapp.com/webview-my_course"
-                },
-                {
-                  "id": 6,
-                  "name": "ช่วยเหลือ",
-                  "image": "https://lh3.googleusercontent.com/17BbnSeEo4-hMaFZZN06Mem4HSpK4s_EjFz3Zao5tsTIyMkO-sAoledf6K3C7G66o11HWIVEDZ5Q4ANinlwOHLmTtfz7cFZnmiHsrxzFHycl5AsSEfptk1mECQ23Xzak0497am3v=s150-p-k",
-                  "url": "https://ndevs-blackboard-test.herokuapp.com/webview-request"
-                },
-                {
-                  "id": 7,
-                  "name": "กุญแจและเหรียญ",
-                  "image": "https://lh3.googleusercontent.com/YhCAbK5mTN0Krq6En3z5wwForfQ4kT4Lc6uHBdmSij7ULUN2pKnEIxgSa7z4Mgcc0xK2L-N9b263YYJECdU_cu425mUn1XLEfwuqyEjyiHOIBchofypMF6L960S2dnZQJqJnGaOu=s150-p-k",
-                  "url": "https://ndevs-blackboard-test.herokuapp.com/webview-key_and_coin"
-                },
-                {
-                  "id": 8,
-                  "name": "เงื่อนไขการใช้งาน",
-                  "image": "https://lh3.googleusercontent.com/bjNz4pjeC5laouWeGXD4LUG967KyMQLSPA-mbESCBUw-NmI-kWs_JJ3BSiBt71Yd9P1br-Jxr6kuzM3RyK6vdj-K4nhZhbhMgRZgkW9uW0vlDWvcI0pzNYQ4kNcQvMJwA-xj-zw2=s150-p-k",
-                  "url": "https://ndevs-blackboard-test.herokuapp.com/webview-term_of_use"
-                }
-              ]
-        }`,
+        code: `${JSON.stringify(json_code)}`,
         list: {
             properties: {
                 title: "Properties",

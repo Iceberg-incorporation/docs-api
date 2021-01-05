@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": "เรียกข้อมูลสำเร็จ",
+  "data": [
+    {
+      "id": 4,
+      "url": "https://app.blackboard-th.com/storage/banners/banner_75W_1596007408.jpeg"
+    },
+    {
+      "id": 5,
+      "url": "https://app.blackboard-th.com/storage/banners/banner_CkI_1596007426.jpeg"
+    },
+    {
+      "id": 6,
+      "url": "https://app.blackboard-th.com/storage/banners/banner_QOJ_1596007435.jpeg"
+    }
+  ]
+}
