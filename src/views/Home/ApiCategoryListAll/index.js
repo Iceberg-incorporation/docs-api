@@ -10,7 +10,7 @@ export default function ApiCategoryListAllView(props) {
     });
     const [common] = React.useState({
         title: "Common use cases",
-        detail: "รออัพเดต"
+        detail: "รออัพเดตละเอียด Common use cases"
     });
     const [request] = React.useState({
         title: "Request",
@@ -25,7 +25,7 @@ export default function ApiCategoryListAllView(props) {
             },
             headers: {
                 title: "Headers",
-                detail: "",
+                detail: "รออัพเดตละเอียด Headers",
                 table: {
                     title: "Headers",
                     header: ["Key", "Description"],
@@ -44,19 +44,19 @@ export default function ApiCategoryListAllView(props) {
             },
             parameters: {
                 title: "Parameters",
-                detail: "ไม่มี",
+                detail: "รออัพเดตละเอียด",
                 table: {
                     title: "Parameters",
-                    header: ["Key", "Description"],
+                    header: ["Key","Type", "Description"],
                     data: null
                 }
             },
             requestBody: {
                 title: "Request body",
-                detail: "ไม่มี",
+                detail: "รออัพเดตละเอียด",
                 table: {
                     title: "Body",
-                    header: ["Key", "Description"],
+                    header: ["Key","Type", "Description"],
                     data: null
                 }
             }
@@ -76,19 +76,23 @@ export default function ApiCategoryListAllView(props) {
                 detail: "",
                 table: {
                     title: "Properties",
-                    header: ["Key", "Description"],
+                    header: ["Key","Type", "Description"],
                     data: [{
                         key: "id",
-                        description: "number"
+                        type: "number",
+                        description: "รออัพเดต"
                     }, {
                         key: "title",
-                        description: "string"
+                        type: "string",
+                        description: "รออัพเดต"
                     }, {
                         key: "icon",
-                        description: "string"
+                        type: "string",
+                        description: "รออัพเดต"
                     }, {
                         key: "cover",
-                        description: "string"
+                        type: "string",
+                        description: "รออัพเดต"
                     }]
                 }
             }
@@ -96,7 +100,7 @@ export default function ApiCategoryListAllView(props) {
     });
     const [errors] = React.useState({
         title: "Errors",
-        detail: "",
+        detail: "รออัพเดตละเอียด",
         table: {
             header: ["Error type", "Error detail", "Description"],
             data: [{

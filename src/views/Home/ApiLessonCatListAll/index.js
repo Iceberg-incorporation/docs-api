@@ -10,7 +10,7 @@ export default function ApiLessonCatListAllView(props) {
     });
     const [common] = React.useState({
         title: "Common use cases",
-        detail: "รออัพเดต"
+        detail: "รออัพเดตละเอียด Common use cases"
     });
     const [request] = React.useState({
         title: "Request",
@@ -25,7 +25,7 @@ export default function ApiLessonCatListAllView(props) {
             },
             headers: {
                 title: "Headers",
-                detail: "",
+                detail: "รออัพเดตรายละเอียด Headers",
                 table: {
                     title: "Headers",
                     header: ["Key", "Description"],
@@ -44,10 +44,10 @@ export default function ApiLessonCatListAllView(props) {
             },
             parameters: {
                 title: "Parameters",
-                detail: "",
+                detail: "รออัพเดตรายละเอียด Parameters",
                 table: {
                     title: "Params",
-                    header: ["Key", "Description"],
+                    header: ["Key","Type", "Description"],
                     data: [
                         {
                             key: "category_id",
@@ -82,10 +82,10 @@ export default function ApiLessonCatListAllView(props) {
             },
             requestBody: {
                 title: "Request body",
-                detail: "ไม่มี",
+                detail: "รออัพเดตรายละเอียด Request body",
                 table:  {
-                    title: "Body",
-                    header: ["Key", "Description"],
+                    title: "ไม่มี",
+                    header: ["Key","Type", "Description"],
                     data: null
                 }
             }

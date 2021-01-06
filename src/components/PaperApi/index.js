@@ -152,10 +152,12 @@ export default function PaperApi(props) {
                                             justify="flex-start"
                                             alignItems="center"
                                         >
-                                            <Grid item xs={1}>
+                                            <Grid item xs={1} style={{
+                                                padding: 2
+                                            }}>
                                                 <div style={{
                                                     backgroundColor: switchColor(props.request.list.HTTPrequest.option.method),
-                                                    width: '40px',
+                                                    maxWidth: 55,
                                                     borderRadius: '3px',
                                                     textAlign: 'center',
                                                 }}>
@@ -240,6 +242,7 @@ export default function PaperApi(props) {
                                                 <TableRow>
                                                     <StyledTableCell align="left" >{props.request.list.parameters.table.header[0]}</StyledTableCell>
                                                     <StyledTableCell align="left" >{props.request.list.parameters.table.header[1]}</StyledTableCell>
+                                                    <StyledTableCell align="left" >{props.request.list.parameters.table.header[2]}</StyledTableCell>
                                                 </TableRow>
                                             </TableHead>
                                             <TableBody>
@@ -247,8 +250,9 @@ export default function PaperApi(props) {
                                                     {props.request.list.parameters.table.data === null ? (
                                                         <React.Fragment>
                                                             <StyledTableRow >
+                                                                <StyledTableCell> </StyledTableCell>
                                                                 <StyledTableCell> {"ไม่มี"}</StyledTableCell>
-                                                                <StyledTableCell> {"ไม่มี"}</StyledTableCell>
+                                                                <StyledTableCell> </StyledTableCell>
                                                             </StyledTableRow>
                                                         </React.Fragment>
                                                     ) : (
@@ -256,6 +260,7 @@ export default function PaperApi(props) {
                                                                 {props.request.list.parameters.table.data.map((_data, key) => (
                                                                     <StyledTableRow key={key}>
                                                                         <StyledTableCell>{_data.key}</StyledTableCell>
+                                                                        <StyledTableCell>{_data.type}</StyledTableCell>
                                                                         <StyledTableCell className={classes.textDetail}>{_data.description}</StyledTableCell>
                                                                     </StyledTableRow>
                                                                 ))}
@@ -282,6 +287,7 @@ export default function PaperApi(props) {
                                                 <TableRow>
                                                     <StyledTableCell align="left" >{props.request.list.requestBody.table.header[0]}</StyledTableCell>
                                                     <StyledTableCell align="left" >{props.request.list.requestBody.table.header[1]}</StyledTableCell>
+                                                    <StyledTableCell align="left" >{props.request.list.requestBody.table.header[2]}</StyledTableCell>
                                                 </TableRow>
                                             </TableHead>
                                             <TableBody>
@@ -289,8 +295,9 @@ export default function PaperApi(props) {
                                                     {props.request.list.requestBody.table.data === null ? (
                                                         <React.Fragment>
                                                             <StyledTableRow >
+                                                                <StyledTableCell> </StyledTableCell>
                                                                 <StyledTableCell> {"ไม่มี"}</StyledTableCell>
-                                                                <StyledTableCell> {"ไม่มี"}</StyledTableCell>
+                                                                <StyledTableCell> </StyledTableCell>
                                                             </StyledTableRow>
                                                         </React.Fragment>
                                                     ) : (
@@ -298,6 +305,7 @@ export default function PaperApi(props) {
                                                                 {props.request.list.requestBody.table.data.map((_data, key) => (
                                                                     <StyledTableRow key={key}>
                                                                         <StyledTableCell>{_data.key}</StyledTableCell>
+                                                                        <StyledTableCell>{_data.type}</StyledTableCell>
                                                                         <StyledTableCell className={classes.textDetail}>{_data.description}</StyledTableCell>
                                                                     </StyledTableRow>
                                                                 ))}
@@ -333,12 +341,14 @@ export default function PaperApi(props) {
                                                 <TableRow>
                                                     <StyledTableCell align="left" >{props.response.list.properties.table.header[0]}</StyledTableCell>
                                                     <StyledTableCell align="left" >{props.response.list.properties.table.header[1]}</StyledTableCell>
+                                                    <StyledTableCell align="left" >{props.response.list.properties.table.header[2]}</StyledTableCell>
                                                 </TableRow>
                                             </TableHead>
                                             <TableBody>
                                                 {props.response.list.properties.table.data.map((_data, key) => (
                                                     <StyledTableRow key={key}>
                                                         <StyledTableCell>{_data.key}</StyledTableCell>
+                                                        <StyledTableCell>{_data.type}</StyledTableCell>
                                                         <StyledTableCell className={classes.textDetail}>{_data.description}</StyledTableCell>
                                                     </StyledTableRow>
                                                 ))}

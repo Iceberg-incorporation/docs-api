@@ -10,7 +10,7 @@ export default function ApiBannerListAllView(props) {
     });
     const [common] = React.useState({
         title: "Common use cases",
-        detail: "รออัพเดต"
+        detail: "รออัพเดตละเอียด Common use cases"
     });
     const [request] = React.useState({
         title: "Request",
@@ -25,7 +25,7 @@ export default function ApiBannerListAllView(props) {
             },
             headers: {
                 title: "Headers",
-                detail: "",
+                detail: "รออัพเดตละเอียด ",
                 table: {
                     title: "Headers",
                     header: ["Key", "Description"],
@@ -44,19 +44,19 @@ export default function ApiBannerListAllView(props) {
             },
             parameters: {
                 title: "Parameters",
-                detail: "ไม่มี",
+                detail: "รออัพเดตละเอียด Parameters",
                 table: {
-                    title: "Parameters",
-                    header: ["Key", "Description"],
+                    title: "ไม่มีกำหนด",
+                    header: ["Key","Type", "Description"],
                     data:null
                 }
             },
             requestBody: {
                 title: "Request body",
-                detail: "ไม่มี",
+                detail: "รออัพเดตละเอียด Request body",
                 table: {
-                    title: "Body",
-                    header: ["Key", "Description"],
+                    title: "ไม่มีกำหนด",
+                    header: ["Key","Type", "Description"],
                     data:null
                 }
             }
@@ -73,16 +73,18 @@ export default function ApiBannerListAllView(props) {
         list: {
             properties: {
                 title: "Properties",
-                detail: "",
+                detail: "รออัพเดตละเอียด Properties",
                 table: {
                     title: "Properties",
-                    header: ["Key", "Description"],
+                    header: ["Key","Type", "Description"],
                     data: [{
                         key: "id",
-                        description: "number"
+                        type: "number",
+                        description: "รออัพเดตละเอียด"
                     }, {
                         key: "url",
-                        description: "string"
+                        type: "string",
+                        description: "รออัพเดตละเอียด"
                     }]
                 }
             }
@@ -90,7 +92,7 @@ export default function ApiBannerListAllView(props) {
     });
     const [errors] = React.useState({
         title: "Errors",
-        detail: "",
+        detail: "รออัพเดตละเอียด Errors",
         table: {
             header: ["Error type", "Error detail", "Description"],
             data: [{

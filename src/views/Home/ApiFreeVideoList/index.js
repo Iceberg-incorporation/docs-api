@@ -47,7 +47,7 @@ export default function ApiFreeVideoListView(props) {
                 detail: "ไม่มี",
                 table: {
                     title: "Parameters",
-                    header: ["Key", "Description"],
+                    header: ["Key","Type", "Description"],
                     data: null
                 }
             },
@@ -56,7 +56,7 @@ export default function ApiFreeVideoListView(props) {
                 detail: "ไม่มี",
                 table: {
                     title: "Body",
-                    header: ["Key", "Description"],
+                    header: ["Key","Type", "Description"],
                     data: null
                 }
             }
@@ -76,19 +76,23 @@ export default function ApiFreeVideoListView(props) {
                 detail: "",
                 table: {
                     title: "Properties",
-                    header: ["Key", "Description"],
+                    header: ["Key","Type", "Description"],
                     data: [{
                         key: "id",
-                        description: "number"
+                        type: "number",
+                        description: "รออัพเดต"
                     }, {
                         key: "name",
-                        description: "string"
+                        type: "string",
+                        description: "รออัพเดต"
                     }, {
                         key: "image",
-                        description: "string"
+                        type: "string",
+                        description: "รออัพเดต"
                     }, {
                         key: "url",
-                        description: "string"
+                        type: "string",
+                        description: "รออัพเดต"
                     }]
                 }
             }
