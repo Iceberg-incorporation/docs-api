@@ -77,19 +77,17 @@ export default function ApiLessonCatListAllView(props) {
                             ธรรมะ พระไตรปิฎก => 123
                             อื่นๆ =>124
                             `
-                        }, {
-                            key: "Content-Type",
-                            description: "application/json"
-                        }, {
-                            key: "platform",
-                            description: "website"
                         }]
                 }
             },
             requestBody: {
                 title: "Request body",
                 detail: "ไม่มี",
-                table: null
+                table:  {
+                    title: "Body",
+                    header: ["Key", "Description"],
+                    data: null
+                }
             }
         }
     });

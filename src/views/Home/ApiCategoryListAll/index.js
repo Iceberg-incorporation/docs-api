@@ -45,18 +45,26 @@ export default function ApiCategoryListAllView(props) {
             parameters: {
                 title: "Parameters",
                 detail: "ไม่มี",
-                table: null
+                table: {
+                    title: "Parameters",
+                    header: ["Key", "Description"],
+                    data: null
+                }
             },
             requestBody: {
                 title: "Request body",
                 detail: "ไม่มี",
-                table: null
+                table: {
+                    title: "Body",
+                    header: ["Key", "Description"],
+                    data: null
+                }
             }
         }
     });
     const [response] = React.useState({
         title: "Response",
-        detail:  `
+        detail: `
         จัดรูปแบบ code
         On Windows Shift + Alt + F.
         On Mac Shift + Option + F.

@@ -96,6 +96,21 @@ export default function PaperApi(props) {
     function handleCopyClose() {
         setOpenCopy(false)
     }
+
+    function switchColor(method) {
+        switch (method) {
+            case "GET":
+                return "green"
+            case "POST":
+                return "orange"
+            case "PUT":
+                return "blue"
+            case "DELETE":
+                return "red"
+            default:
+                break;
+        }
+    }
     return (
         <React.Fragment>
             <CssBaseline />
@@ -139,7 +154,7 @@ export default function PaperApi(props) {
                                         >
                                             <Grid item xs={1}>
                                                 <div style={{
-                                                    backgroundColor: 'green',
+                                                    backgroundColor: switchColor(props.request.list.HTTPrequest.option.method),
                                                     width: '40px',
                                                     borderRadius: '3px',
                                                     textAlign: 'center',
@@ -169,7 +184,23 @@ export default function PaperApi(props) {
                             <Typography component="div" className={classes.devsiteRequestHeaders}>
                                 <Typography variant="h5">{props.request.list.headers.title}</Typography>
                                 <Typography variant="body1" className={classes.textDetail}>{props.request.list.headers.detail}</Typography>
-                                {props.request.list.headers.table === null ? (<React.Fragment></React.Fragment>) : (<React.Fragment>
+                                {props.request.list.headers.table === null ? (<React.Fragment>
+                                    <TableHead>
+                                        <TableRow>
+                                            <TableCell align="left"><Typography variant="h6">{props.request.list.headers.table.title}</Typography></TableCell>
+                                            <TableCell align="left"></TableCell>
+                                        </TableRow>
+                                        <TableRow>
+                                            <StyledTableCell align="left" >{props.request.list.headers.table.header[0]}</StyledTableCell>
+                                            <StyledTableCell align="left" >{props.request.list.headers.table.header[1]}</StyledTableCell>
+                                        </TableRow>
+                                    </TableHead>
+                                    <TableBody>
+                                        <StyledTableRow >
+                                            {"ไม่มี"}
+                                        </StyledTableRow>
+                                    </TableBody>
+                                </React.Fragment>) : (<React.Fragment>
                                     <TableContainer component="div">
                                         <Table aria-label="headers table">
                                             <TableHead>
@@ -212,12 +243,25 @@ export default function PaperApi(props) {
                                                 </TableRow>
                                             </TableHead>
                                             <TableBody>
-                                                {props.request.list.parameters.table.data.map((_data, key) => (
-                                                    <StyledTableRow key={key}>
-                                                        <StyledTableCell>{_data.key}</StyledTableCell>
-                                                        <StyledTableCell className={classes.textDetail}>{_data.description}</StyledTableCell>
-                                                    </StyledTableRow>
-                                                ))}
+                                                <React.Fragment>
+                                                    {props.request.list.parameters.table.data === null ? (
+                                                        <React.Fragment>
+                                                            <StyledTableRow >
+                                                                <StyledTableCell> {"ไม่มี"}</StyledTableCell>
+                                                                <StyledTableCell> {"ไม่มี"}</StyledTableCell>
+                                                            </StyledTableRow>
+                                                        </React.Fragment>
+                                                    ) : (
+                                                            <React.Fragment>
+                                                                {props.request.list.parameters.table.data.map((_data, key) => (
+                                                                    <StyledTableRow key={key}>
+                                                                        <StyledTableCell>{_data.key}</StyledTableCell>
+                                                                        <StyledTableCell className={classes.textDetail}>{_data.description}</StyledTableCell>
+                                                                    </StyledTableRow>
+                                                                ))}
+                                                            </React.Fragment>
+                                                        )}
+                                                </React.Fragment>
 
                                             </TableBody>
                                         </Table>
@@ -227,7 +271,47 @@ export default function PaperApi(props) {
                             <Typography component="div" className={classes.devsiteRequestBody}>
                                 <Typography variant="h5">{props.request.list.requestBody.title}</Typography>
                                 <Typography variant="body1" className={classes.textDetail}>{props.request.list.requestBody.detail}</Typography>
-                                {props.request.list.requestBody.table === null ? (<React.Fragment></React.Fragment>) : (<React.Fragment>Table Show</React.Fragment>)}
+                                {props.request.list.requestBody.table === null ? (<React.Fragment></React.Fragment>) : (<React.Fragment>
+                                    <TableContainer component="div">
+                                        <Table aria-label="requestBody table">
+                                            <TableHead>
+                                                <TableRow>
+                                                    <TableCell align="left"><Typography variant="h6">{props.request.list.requestBody.table.title}</Typography></TableCell>
+                                                    <TableCell align="left"></TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <StyledTableCell align="left" >{props.request.list.requestBody.table.header[0]}</StyledTableCell>
+                                                    <StyledTableCell align="left" >{props.request.list.requestBody.table.header[1]}</StyledTableCell>
+                                                </TableRow>
+                                            </TableHead>
+                                            <TableBody>
+                                                <React.Fragment>
+                                                    {props.request.list.requestBody.table.data === null ? (
+                                                        <React.Fragment>
+                                                            <StyledTableRow >
+                                                                <StyledTableCell> {"ไม่มี"}</StyledTableCell>
+                                                                <StyledTableCell> {"ไม่มี"}</StyledTableCell>
+                                                            </StyledTableRow>
+                                                        </React.Fragment>
+                                                    ) : (
+                                                            <React.Fragment>
+                                                                {props.request.list.requestBody.table.data.map((_data, key) => (
+                                                                    <StyledTableRow key={key}>
+                                                                        <StyledTableCell>{_data.key}</StyledTableCell>
+                                                                        <StyledTableCell className={classes.textDetail}>{_data.description}</StyledTableCell>
+                                                                    </StyledTableRow>
+                                                                ))}
+                                                            </React.Fragment>
+                                                        )}
+                                                </React.Fragment>
+
+
+
+
+                                            </TableBody>
+                                        </Table>
+                                    </TableContainer>
+                                </React.Fragment>)}
                             </Typography>
                         </Typography>
                         <Typography component="div" className={classes.devsiteResponse}>

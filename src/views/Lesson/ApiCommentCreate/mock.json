@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": "return comment data success",
+  "data": {
+    "id": 7,
+    "lesson_id": 54,
+    "rate": 3,
+    "comment": "test",
+    "user_id": 104,
+    "user_name": "dotD ",
+    "user_pic": "https://lh3.googleusercontent.com/a-/AOh14GgKigBblQAK_yaN9Hc5nVsd6XSUOgC-Anq35YIG=s96-c",
+    "created_at": "2021-01-05T09:06:41.405Z"
+  }
+}

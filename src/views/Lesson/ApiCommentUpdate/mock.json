@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "statusCode": 200,
+  "message": "return comment data success",
+  "data": {
+      "lesson_id": 54,
+      "rate": 3,
+      "comment": "test update",
+      "user_id": 104
+  }
+}

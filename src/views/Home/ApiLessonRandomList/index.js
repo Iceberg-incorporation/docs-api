@@ -89,7 +89,11 @@ export default function ApiLessonRandomListView(props) {
             requestBody: {
                 title: "Request body",
                 detail: "ไม่มี",
-                table: null
+                table:  {
+                    title: "Body",
+                    header: ["Key", "Description"],
+                    data: null
+                }
             }
         }
     });

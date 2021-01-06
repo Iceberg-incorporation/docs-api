@@ -2,11 +2,11 @@ import { PaperApi } from '@doc-api/components';
 import React from 'react';
 import json_code from './mock.json';
 
-export default function ApiFreeVideoListView(props) {
-    const [pathUrl] = React.useState(["blackboardapp.co", "user", "student", "page", "home", "video_free", "list"])
+export default function ApiCommentRemoveView(props) {
+    const [pathUrl] = React.useState(["blackboardapp.co", "user", "student", "page", "lesson", "comment", "remove"])
     const [header] = React.useState({
-        title: "VideoFree: list",
-        detail: "Returns รายการ VideoFree ที่ตรงกับพารามิเตอร์คำขอ API"
+        title: "Comment: remove",
+        detail: "Returns รายการ Comment ที่ตรงกับพารามิเตอร์คำขอ API"
     });
     const [common] = React.useState({
         title: "Common use cases",
@@ -17,15 +17,15 @@ export default function ApiFreeVideoListView(props) {
         list: {
             HTTPrequest: {
                 title: "HTTP request",
-                detail: `GET https://api.blackboardapp.co/api/v1/home/free/video/all`,
+                detail: `DELETE https://api.blackboardapp.co/api/v1/lesson/comment?id=[comment_id]`,
                 option: {
-                    method: 'GET',
-                    path: `https://api.blackboardapp.co/api/v1/home/free/video/all`
+                    method: 'DELETE',
+                    path: `https://api.blackboardapp.co/api/v1/lesson/comment?id=[comment_id]`
                 }
             },
             headers: {
                 title: "Headers",
-                detail: "",
+                detail: "ไม่มี",
                 table: {
                     title: "Headers",
                     header: ["Key", "Description"],
@@ -34,26 +34,30 @@ export default function ApiFreeVideoListView(props) {
                             key: "app-name",
                             description: "blackboard-th"
                         }, {
+                            key: "authorization",
+                            description: "Bearer [access_token]"
+                        }, {
                             key: "Content-Type",
                             description: "application/json"
-                        }, {
-                            key: "platform",
-                            description: "website"
                         }]
                 }
             },
             parameters: {
                 title: "Parameters",
-                detail: "ไม่มี",
+                detail: "",
                 table: {
-                    title: "Parameters",
+                    title: "Query",
                     header: ["Key", "Description"],
-                    data: null
+                    data: [
+                        {
+                            key: "comment_id",
+                            description: `number`
+                        }]
                 }
             },
             requestBody: {
                 title: "Request body",
-                detail: "ไม่มี",
+                detail: "",
                 table: {
                     title: "Body",
                     header: ["Key", "Description"],
@@ -78,17 +82,29 @@ export default function ApiFreeVideoListView(props) {
                     title: "Properties",
                     header: ["Key", "Description"],
                     data: [{
-                        key: "id",
+                        key: "fieldCount",
                         description: "number"
                     }, {
-                        key: "name",
+                        key: "affectedRows",
+                        description: "number"
+                    }, {
+                        key: "insertId",
+                        description: "number"
+                    }, {
+                        key: "serverStatus",
+                        description: "number"
+                    }, {
+                        key: "warningCount",
+                        description: "number"
+                    }, {
+                        key: "message",
                         description: "string"
                     }, {
-                        key: "image",
-                        description: "string"
+                        key: "protocol41",
+                        description: "bool"
                     }, {
-                        key: "url",
-                        description: "string"
+                        key: "changedRows",
+                        description: "number"
                     }]
                 }
             }

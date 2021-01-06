@@ -130,11 +130,17 @@ export default function CustomizedTreeView() {
                                 <StyledTreeItem nodeId="user-1-1-1-1" label="create" onClick={() => {
                                     history.push('/user/student/lesson/comment/create')
                                 }} ></StyledTreeItem>
+                                 <StyledTreeItem nodeId="user-1-1-1-2" label="update" onClick={() => {
+                                    history.push('/user/student/lesson/comment/update')
+                                }} ></StyledTreeItem>
+                                <StyledTreeItem nodeId="user-1-1-1-3" label="remove" onClick={() => {
+                                    history.push('/user/student/lesson/comment/remove')
+                                }} ></StyledTreeItem>
                             </StyledTreeItem>
                         </StyledTreeItem>
                     </StyledTreeItem>
                     <StyledTreeItem nodeId="user-2" label="ครู" >
-                        <StyledTreeItem nodeId="user-1" label="หน้า" ></StyledTreeItem>
+                       
                     </StyledTreeItem>
                 </StyledTreeItem>
             </StyledTreeItem>

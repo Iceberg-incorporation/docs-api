@@ -1,6 +1,7 @@
 import {
   ApiBannerListAllView, ApiShortcutListAllView, ApiFreeVideoListView,
-  ApiCategoryListAllView, ApiLessonRandomListView, ApiLessonCatListAllView
+  ApiCategoryListAllView, ApiLessonRandomListView, ApiLessonCatListAllView,
+  ApiCommentCreateView, ApiCommentUpdateView, ApiCommentRemoveView
 } from '@doc-api/views'
 
 export const routes = [
@@ -39,6 +40,21 @@ export const routes = [
     path: "/user/student/home/lesson-by-category/list",
     sidebar: () => <div>lesson-by-category</div>,
     main: () => <ApiLessonCatListAllView></ApiLessonCatListAllView>
+  },
+  {
+    path: "/user/student/lesson/comment/create",
+    sidebar: () => <div>comment</div>,
+    main: () => <ApiCommentCreateView></ApiCommentCreateView>
+  },
+  {
+    path: "/user/student/lesson/comment/update",
+    sidebar: () => <div>comment</div>,
+    main: () => <ApiCommentUpdateView></ApiCommentUpdateView>
+  },
+  {
+    path: "/user/student/lesson/comment/remove",
+    sidebar: () => <div>comment</div>,
+    main: () => <ApiCommentRemoveView></ApiCommentRemoveView>
   },
   {
     path: "/shoelaces",

@@ -4,3 +4,6 @@ export { default as ApiFreeVideoListView } from './Home/ApiFreeVideoList';
 export { default as ApiCategoryListAllView } from './Home/ApiCategoryListAll';
 export { default as ApiLessonRandomListView } from './Home/ApiLessonRandomList';
 export { default as ApiLessonCatListAllView } from './Home/ApiLessonCatListAll';
+export { default as ApiCommentCreateView } from './Lesson/ApiCommentCreate';
+export { default as ApiCommentUpdateView } from './Lesson/ApiCommentUpdate';
+export { default as ApiCommentRemoveView } from './Lesson/ApiCommentRemove';

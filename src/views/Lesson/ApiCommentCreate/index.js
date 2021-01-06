@@ -2,11 +2,11 @@ import { PaperApi } from '@doc-api/components';
 import React from 'react';
 import json_code from './mock.json';
 
-export default function ApiFreeVideoListView(props) {
-    const [pathUrl] = React.useState(["blackboardapp.co", "user", "student", "page", "home", "video_free", "list"])
+export default function ApiCommentCreateView(props) {
+    const [pathUrl] = React.useState(["blackboardapp.co", "user", "student", "page", "lesson", "comment", "create"])
     const [header] = React.useState({
-        title: "VideoFree: list",
-        detail: "Returns รายการ VideoFree ที่ตรงกับพารามิเตอร์คำขอ API"
+        title: "Comment: create",
+        detail: "Returns รายการ Comment ที่ตรงกับพารามิเตอร์คำขอ API"
     });
     const [common] = React.useState({
         title: "Common use cases",
@@ -17,15 +17,15 @@ export default function ApiFreeVideoListView(props) {
         list: {
             HTTPrequest: {
                 title: "HTTP request",
-                detail: `GET https://api.blackboardapp.co/api/v1/home/free/video/all`,
+                detail: `POST https://api.blackboardapp.co/api/v1/lesson/comment`,
                 option: {
-                    method: 'GET',
-                    path: `https://api.blackboardapp.co/api/v1/home/free/video/all`
+                    method: 'POST',
+                    path: `https://api.blackboardapp.co/api/v1/lesson/comment`
                 }
             },
             headers: {
                 title: "Headers",
-                detail: "",
+                detail: "ไม่มี",
                 table: {
                     title: "Headers",
                     header: ["Key", "Description"],
@@ -34,11 +34,11 @@ export default function ApiFreeVideoListView(props) {
                             key: "app-name",
                             description: "blackboard-th"
                         }, {
+                            key: "authorization",
+                            description: "Bearer [access_token]"
+                        }, {
                             key: "Content-Type",
                             description: "application/json"
-                        }, {
-                            key: "platform",
-                            description: "website"
                         }]
                 }
             },
@@ -53,11 +53,21 @@ export default function ApiFreeVideoListView(props) {
             },
             requestBody: {
                 title: "Request body",
-                detail: "ไม่มี",
+                detail: "",
                 table: {
                     title: "Body",
                     header: ["Key", "Description"],
-                    data: null
+                    data: [
+                        {
+                            key: "lesson_id",
+                            description: "number"
+                        }, {
+                            key: "rate",
+                            description: "string | number "
+                        }, {
+                            key: "comment",
+                            description: "string"
+                        }]
                 }
             }
         }
@@ -81,14 +91,26 @@ export default function ApiFreeVideoListView(props) {
                         key: "id",
                         description: "number"
                     }, {
-                        key: "name",
+                        key: "lesson_id",
+                        description: "number"
+                    }, {
+                        key: "rate",
+                        description: "number | string"
+                    }, {
+                        key: "comment",
                         description: "string"
                     }, {
-                        key: "image",
+                        key: "user_id",
+                        description: "number"
+                    }, {
+                        key: "user_name",
                         description: "string"
                     }, {
-                        key: "url",
+                        key: "user_pic",
                         description: "string"
+                    }, {
+                        key: "created_at",
+                        description: "Date"
                     }]
                 }
             }

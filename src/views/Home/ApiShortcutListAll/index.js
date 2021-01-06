@@ -25,24 +25,46 @@ export default function ApiShortcutListAllView(props) {
             },
             headers: {
                 title: "Headers",
-                detail: "ไม่มี",
-                table: null
+                detail: "",
+                table: {
+                    title: "Headers",
+                    header: ["Key", "Description"],
+                    data: [
+                        {
+                            key: "app-name",
+                            description: "blackboard-th"
+                        }, {
+                            key: "Content-Type",
+                            description: "application/json"
+                        }, {
+                            key: "platform",
+                            description: "website"
+                        }]
+                }
             },
             parameters: {
                 title: "Parameters",
                 detail: "ไม่มี",
-                table: null
+                table: {
+                    title: "Parameters",
+                    header: ["Key", "Description"],
+                    data: null
+                }
             },
             requestBody: {
                 title: "Request body",
                 detail: "ไม่มี",
-                table: null
+                table: {
+                    title: "Body",
+                    header: ["Key", "Description"],
+                    data: null
+                }
             }
         }
     });
     const [response] = React.useState({
         title: "Response",
-        detail:  `
+        detail: `
         จัดรูปแบบ code
         On Windows Shift + Alt + F.
         On Mac Shift + Option + F.
