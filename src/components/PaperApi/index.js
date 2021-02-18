@@ -273,6 +273,7 @@ export default function PaperApi(props) {
                                     </TableContainer>
                                 </React.Fragment>)}
                             </Typography>
+
                             <Typography component="div" className={classes.devsiteRequestBody}>
                                 <Typography variant="h5">{props.request.list.requestBody.title}</Typography>
                                 <Typography variant="body1" className={classes.textDetail}>{props.request.list.requestBody.detail}</Typography>
@@ -321,6 +322,7 @@ export default function PaperApi(props) {
                                     </TableContainer>
                                 </React.Fragment>)}
                             </Typography>
+                       
                         </Typography>
                         <Typography component="div" className={classes.devsiteResponse}>
                             <Typography variant="h4">{props.response.title}</Typography>
@@ -363,7 +365,51 @@ export default function PaperApi(props) {
                         <Typography component="div" className={classes.devsiteErrors}>
                             <Typography variant="h4">{props.errors.title}</Typography>
                             <Typography variant="subtitle1" className={classes.textDetail}>{props.errors.detail}</Typography>
-                            {props.errors.table === null ? (<React.Fragment></React.Fragment>) : (<React.Fragment>Table Show</React.Fragment>)}
+                            {props.errors.table === null ? (<React.Fragment></React.Fragment>) : (<React.Fragment>
+                                    <TableContainer component="div">
+                                        <Table aria-label="requestBody table">
+                                            <TableHead>
+                                                <TableRow>
+                                                    <TableCell align="left"><Typography variant="h6">{props.errors.table.title}</Typography></TableCell>
+                                                    <TableCell align="left"></TableCell>
+                                                </TableRow>
+                                                <TableRow>
+                                                    <StyledTableCell align="left" >{props.errors.table.header[0]}</StyledTableCell>
+                                                    <StyledTableCell align="left" >{props.errors.table.header[1]}</StyledTableCell>
+                                                    <StyledTableCell align="left" >{props.errors.table.header[2]}</StyledTableCell>
+                                                </TableRow>
+                                            </TableHead>
+                                            <TableBody>
+                                                <React.Fragment>
+                                                    {props.errors.table.data === null ? (
+                                                        <React.Fragment>
+                                                            <StyledTableRow >
+                                                                <StyledTableCell> </StyledTableCell>
+                                                                <StyledTableCell> {"ไม่มี"}</StyledTableCell>
+                                                                <StyledTableCell> </StyledTableCell>
+                                                            </StyledTableRow>
+                                                        </React.Fragment>
+                                                    ) : (
+                                                            <React.Fragment>
+                                                                {props.errors.table.data.map((_data, key) => (
+                                                                    <StyledTableRow key={key}>
+                                                                        <StyledTableCell>{_data.key}</StyledTableCell>
+                                                                        <StyledTableCell>{_data.type}</StyledTableCell>
+                                                                        <StyledTableCell className={classes.textDetail}>{_data.description}</StyledTableCell>
+                                                                    </StyledTableRow>
+                                                                ))}
+                                                            </React.Fragment>
+                                                        )}
+                                                </React.Fragment>
+
+
+
+
+                                            </TableBody>
+                                        </Table>
+                                    </TableContainer>
+                                </React.Fragment>)}
+                           
                         </Typography>
                     </Typography>
 

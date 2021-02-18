@@ -1,0 +1,36 @@
+{
+    "success": true,
+    "statusCode": 200,
+    "message": "signin",
+    "uid": "uJq03EU85IMTFC2nyewYU44vKEf2",
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTYxMzYzNTk5NCwiZXhwIjoxNjEzNjM5NTk0LCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay1jdzZrYUBhdXRoLXNlcnZpY2UtYjRmYTkuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1jdzZrYUBhdXRoLXNlcnZpY2UtYjRmYTkuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJ1aWQiOiJ1SnEwM0VVODVJTVRGQzJueWV3WVU0NHZLRWYyIn0.cLg-IrMNNbRe3gOiNrsslKo16NAQ_hRoW2Yst2WQoGqEwm2rlK8OCR95A-Krnr9BPS4a-7az_-xDVKV3Y7kY5cBpjAZ_nDjo_BdBzR-N5czWQbkTsrpSQLUvA9LZS6aXjdEe3xeU-NJyjN_WoqsGjI4YYGYhMWNQCAHANtv0PRdRroSZghDEMmlwCuhFkky_tIIvGRIXyAaXTNWTZfETY9dzNZCCPAtlCRH9vOx4D58SHN2_l6RsMsqjyTHqz5pbu9CHUMUN-cjOm5Bkh57IY-VlwxaY4oWQ8uQkvOVEgSGr7Y8vYg0PEO0_S8zKFJaOQc89tDjntEH7qSUr6zGJaA",
+    "emailVerified": false,
+    "metadata": {
+        "a": "1613635886458",
+        "b": "1613635886458",
+        "lastSignInTime": "Thu, 18 Feb 2021 08:11:26 GMT",
+        "creationTime": "Thu, 18 Feb 2021 08:11:26 GMT"
+    },
+    "data": [
+        {
+            "user_id": "6079879589511823390",
+            "firebase_id": "uJq03EU85IMTFC2nyewYU44vKEf2",
+            "email_id": "pineapplestudio7@hotmail.com",
+            "email": "pineapplestudio7@hotmail.com",
+            "displayName": "Nutthapat Piasangka",
+            "photoURL": "https://firebasestorage.googleapis.com/v0/b/blackboard-th.appspot.com/o/images%2Fprofile%2Fprovider_photo%2Fdefault.png?alt=media&token=9a1fe141-5647-4171-96b9-98e26f94ffe5",
+            "phoneNumber": "+66803147507",
+            "providerId": "password"
+        }
+    ],
+    "providerData": [
+        {
+            "uid": "pineapplestudio7@hotmail.com",
+            "displayName": "Nutthapat Piasangka",
+            "photoURL": "https://firebasestorage.googleapis.com/v0/b/blackboard-th.appspot.com/o/images%2Fprofile%2Fprovider_photo%2Fdefault.png?alt=media&token=9a1fe141-5647-4171-96b9-98e26f94ffe5",
+            "email": "pineapplestudio7@hotmail.com",
+            "phoneNumber": null,
+            "providerId": "password"
+        }
+    ]
+}

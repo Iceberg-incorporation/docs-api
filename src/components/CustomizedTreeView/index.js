@@ -76,6 +76,54 @@ const useStyles = makeStyles({
     },
 });
 
+function PostType(props) {
+    return (
+        <span>
+            <span style={{
+                fontWeight: 700,
+                color: 'orange',
+            }}>{"POST "}</span>
+            <span>{props.text}</span>
+        </span>
+    )
+}
+
+function PutType(props) {
+    return (
+        <span>
+            <span style={{
+                fontWeight: 700,
+                color: 'blue',
+            }}>{"PUT "}</span>
+            <span>{props.text}</span>
+        </span>
+    )
+}
+
+function DeleteType(props) {
+    return (
+        <span>
+            <span style={{
+                fontWeight: 700,
+                color: 'red',
+            }}>{"DELETE "}</span>
+            <span>{props.text}</span>
+        </span>
+    )
+}
+
+function GetType(props) {
+    return (
+        <span>
+            <span style={{
+                fontWeight: 700,
+                color: 'green',
+            }}>{"GET "}</span>
+            <span>{props.text}</span>
+        </span>
+    )
+}
+
 export default function CustomizedTreeView() {
     const classes = useStyles();
     const history = useHistory()
@@ -88,59 +136,73 @@ export default function CustomizedTreeView() {
             defaultEndIcon={<CloseSquare />}
         >
             <StyledTreeItem nodeId="blackboard" label="Blackboardapp.co">
-                <StyledTreeItem nodeId="auth" label="Auth"></StyledTreeItem>
+                <StyledTreeItem nodeId="auth" label="Auth">
+                    <StyledTreeItem nodeId="auth-firebase" label="firebase" >
+                        <StyledTreeItem nodeId="user-firebase-email" label="email" >
+                            <StyledTreeItem nodeId="user-firebase-email-signup" label={(<PostType text="signup" />)} onClick={() => {
+                                history.push('/auth/firebase/email/signup')
+                            }} ></StyledTreeItem>
+                            <StyledTreeItem nodeId="user-firebase-email-signin" label={(<PostType text="signin" />)} onClick={() => {
+                                history.push('/auth/firebase/email/signin')
+                            }} ></StyledTreeItem>
+                        </StyledTreeItem>
+                        <StyledTreeItem nodeId="user-firebase-signin" label={(<PostType text="signin" />)} onClick={() => {
+                            history.push('/auth/firebase/signin')
+                        }} ></StyledTreeItem>
+                    </StyledTreeItem>
+                </StyledTreeItem>
                 <StyledTreeItem nodeId="payment" label="Payment"></StyledTreeItem>
                 <StyledTreeItem nodeId="admin" label="Admin"></StyledTreeItem>
                 <StyledTreeItem nodeId="user" label="User">
                     <StyledTreeItem nodeId="user-1" label="นักเรียน" >
                         <StyledTreeItem nodeId="user-1-1" label="Home" >
                             <StyledTreeItem nodeId="user-1-1-1" label="Banner" >
-                                <StyledTreeItem nodeId="user-1-1-1-1" label="list" onClick={() => {
+                                <StyledTreeItem nodeId="user-1-1-1-1" label={(<GetType text="list" />)} onClick={() => {
                                     history.push('/user/student/home/banner/list')
                                 }} ></StyledTreeItem>
                             </StyledTreeItem>
                             <StyledTreeItem nodeId="user-1-1-1-2" label="Shotcut">
-                                <StyledTreeItem nodeId="user-1-1-1-2-1" label="list" onClick={() => {
+                                <StyledTreeItem nodeId="user-1-1-1-2-1" label={(<GetType text="list" />)} onClick={() => {
                                     history.push('/user/student/home/shortcut/list')
                                 }} ></StyledTreeItem>
                             </StyledTreeItem>
                             <StyledTreeItem nodeId="user-1-1-1-3" label="VideoFree">
-                                <StyledTreeItem nodeId="user-1-1-1-3-1" label="list" onClick={() => {
+                                <StyledTreeItem nodeId="user-1-1-1-3-1" label={(<GetType text="list" />)} onClick={() => {
                                     history.push('/user/student/home/video-free/list')
                                 }} ></StyledTreeItem>
                             </StyledTreeItem>
                             <StyledTreeItem nodeId="user-1-1-1-4" label="Category">
-                                <StyledTreeItem nodeId="user-1-1-1-4-1" label="list" onClick={() => {
+                                <StyledTreeItem nodeId="user-1-1-1-4-1" label={(<GetType text="list" />)} onClick={() => {
                                     history.push('/user/student/home/category/list')
                                 }} ></StyledTreeItem>
                             </StyledTreeItem>
                             <StyledTreeItem nodeId="user-1-1-1-5" label="RandomLesson">
-                                <StyledTreeItem nodeId="user-1-1-1-5-1" label="list" onClick={() => {
+                                <StyledTreeItem nodeId="user-1-1-1-5-1" label={(<GetType text="list" />)} onClick={() => {
                                     history.push('/user/student/home/random-lesson/list')
                                 }} ></StyledTreeItem>
                             </StyledTreeItem>
                             <StyledTreeItem nodeId="user-1-1-1-6" label="LessonByCategory">
-                                <StyledTreeItem nodeId="user-1-1-1-6-1" label="list" onClick={() => {
+                                <StyledTreeItem nodeId="user-1-1-1-6-1" label={(<GetType text="list" />)} onClick={() => {
                                     history.push('/user/student/home/lesson-by-category/list')
                                 }} ></StyledTreeItem>
                             </StyledTreeItem>
                         </StyledTreeItem>
                         <StyledTreeItem nodeId="user-1-2" label="Lesson" >
                             <StyledTreeItem nodeId="user-1-2-1" label="Comment" >
-                                <StyledTreeItem nodeId="user-1-1-1-1" label="create" onClick={() => {
+                                <StyledTreeItem nodeId="user-1-1-1-1" label={(<PostType text="create" />)} onClick={() => {
                                     history.push('/user/student/lesson/comment/create')
                                 }} ></StyledTreeItem>
-                                 <StyledTreeItem nodeId="user-1-1-1-2" label="update" onClick={() => {
+                                <StyledTreeItem nodeId="user-1-1-1-2" label={(<PutType text="update" />)} onClick={() => {
                                     history.push('/user/student/lesson/comment/update')
                                 }} ></StyledTreeItem>
-                                <StyledTreeItem nodeId="user-1-1-1-3" label="remove" onClick={() => {
+                                <StyledTreeItem nodeId="user-1-1-1-3" label={(<DeleteType text="remove" />)} onClick={() => {
                                     history.push('/user/student/lesson/comment/remove')
                                 }} ></StyledTreeItem>
                             </StyledTreeItem>
                         </StyledTreeItem>
                     </StyledTreeItem>
                     <StyledTreeItem nodeId="user-2" label="ครู" >
-                       
+
                     </StyledTreeItem>
                 </StyledTreeItem>
             </StyledTreeItem>

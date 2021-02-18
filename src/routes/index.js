@@ -1,7 +1,8 @@
 import {
   ApiBannerListAllView, ApiShortcutListAllView, ApiFreeVideoListView,
   ApiCategoryListAllView, ApiLessonRandomListView, ApiLessonCatListAllView,
-  ApiCommentCreateView, ApiCommentUpdateView, ApiCommentRemoveView
+  ApiCommentCreateView, ApiCommentUpdateView, ApiCommentRemoveView,
+  ApiFirebaseEmailSignup,ApiFirebaseEmailSignin,ApiFirebaseSignin
 } from '@doc-api/views'
 
 export const routes = [
@@ -10,6 +11,21 @@ export const routes = [
     exact: true,
     sidebar: () => <div>home!</div>,
     main: () => <h2>Home</h2>
+  },
+  {
+    path: "/auth/firebase/email/signup",
+    sidebar: () => <div>signup</div>,
+    main: () => <ApiFirebaseEmailSignup></ApiFirebaseEmailSignup>
+  },
+  {
+    path: "/auth/firebase/email/signin",
+    sidebar: () => <div>signin</div>,
+    main: () => <ApiFirebaseEmailSignin></ApiFirebaseEmailSignin>
+  },
+  {
+    path: "/auth/firebase/signin",
+    sidebar: () => <div>signin</div>,
+    main: () => <ApiFirebaseSignin></ApiFirebaseSignin>
   },
   {
     path: "/user/student/home/banner/list",

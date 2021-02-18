@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "statusCode": 201,
+  "message": "signup",
+  "uid": "uJq03EU85IMTFC2nyewYU44vKEf2",
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImlhdCI6MTYxMzYzNTg4NywiZXhwIjoxNjEzNjM5NDg3LCJpc3MiOiJmaXJlYmFzZS1hZG1pbnNkay1jdzZrYUBhdXRoLXNlcnZpY2UtYjRmYTkuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1jdzZrYUBhdXRoLXNlcnZpY2UtYjRmYTkuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJ1aWQiOiJ1SnEwM0VVODVJTVRGQzJueWV3WVU0NHZLRWYyIn0.f6GdDq_wTmFlVaKAKx08Cs2W3oS-q8onkC7Se4hDl6nm4DwEHqDTYNkNWyjNg2TEsfMgrOzBk7M1lHJLqShcGwkh5pEpmZMEFRqKXqQBoc7lSNiuzkI8w8lHdiiKmF6Bi-uFRIb-vlOd_NbtJIqCIAmVTM5v2wzKwbWDTOpwi03rfX8IxKlTbnsP6XJ7zgUBfd832LRk7oMZdbY1_-fUjrSnrpTSpOjGXMWvLQ8-YpZDiOe3ZwNDdaHG5zuGA-x7k-fn1K2f2nmFJBuiAl6nkgnDPVF1F7i1L3nYFLiER6h9CsTQEXU2_1_bPpj_1ppZ_P2KohpFh5wREFBKbvBrXA",
+  "emailVerified": false,
+  "metadata": {
+      "a": "1613635886458",
+      "b": "1613635886458",
+      "lastSignInTime": "Thu, 18 Feb 2021 08:11:26 GMT",
+      "creationTime": "Thu, 18 Feb 2021 08:11:26 GMT"
+  },
+  "data": [
+      {
+          "user_id": "6079879589511823390",
+          "firebase_id": "uJq03EU85IMTFC2nyewYU44vKEf2",
+          "phone_id": "pineapplestudio7@hotmail.com",
+          "displayName": "Nutthapat Piasangka",
+          "email": "pineapplestudio7@hotmail.com",
+          "photoURL": "https://firebasestorage.googleapis.com/v0/b/blackboard-th.appspot.com/o/images%2Fprofile%2Fprovider_photo%2Fdefault.png?alt=media&token=9a1fe141-5647-4171-96b9-98e26f94ffe5",
+          "phoneNumber": "+66803147507",
+          "providerId": "password"
+      }
+  ],
+  "providerData": [
+      {
+          "uid": "pineapplestudio7@hotmail.com",
+          "displayName": "Nutthapat Piasangka",
+          "photoURL": "https://firebasestorage.googleapis.com/v0/b/blackboard-th.appspot.com/o/images%2Fprofile%2Fprovider_photo%2Fdefault.png?alt=media&token=9a1fe141-5647-4171-96b9-98e26f94ffe5",
+          "email": "pineapplestudio7@hotmail.com",
+          "phoneNumber": null,
+          "providerId": "password"
+      }
+  ]
+}

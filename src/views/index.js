@@ -7,3 +7,6 @@ export { default as ApiLessonCatListAllView } from './Home/ApiLessonCatListAll';
 export { default as ApiCommentCreateView } from './Lesson/ApiCommentCreate';
 export { default as ApiCommentUpdateView } from './Lesson/ApiCommentUpdate';
 export { default as ApiCommentRemoveView } from './Lesson/ApiCommentRemove';
+export { default as ApiFirebaseEmailSignup } from './Auth/ApiFirebaseEmailSignup';
+export { default as ApiFirebaseEmailSignin } from './Auth/ApiFirebaseEmailSignin';
+export { default as ApiFirebaseSignin } from './Auth/ApiFirebaseSignin';
